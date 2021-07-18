@@ -1,13 +1,116 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html{
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(154deg, rgb(137, 0, 200) 10%,rgb(240, 0, 180) 40%) no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    color: white;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html * {
+    box-sizing: inherit;
+}
+
+.header{
+    text-align: center;
+}
+
+.container{
+    margin: 0 8rem;
+}
+
+.grid {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.grid > * {
+    flex: 1;
+}
+
+.form_title{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+form > input, textarea {
+    outline: none;
+    border: solid 1px #00000044;
+    height: 2.5rem;
+    margin: .5rem 0 1.5rem 0;
+    padding: 0 1rem;
+}
+
+input:focus, textarea:focus{
+    box-shadow: 0 0 0px 4px #ffffff77;
+}
+
+textarea{
+    min-height: 10vh;
+    padding: 1rem;
+    resize: vertical;
+}
+
+.form-item{
+    width: 100%;
+}
+
+button{
+    height: 2.5rem;
+    width: 6.5rem;
+    border: none;
+    background-color: rgb(137, 0, 200);
+    color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    transition: all .1s linear;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active{
+    background-color: rgb(113, 0, 165);
+}
+
+.pet_card{
+    width: 100%;
+    background: white;
+    color: #333;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.pet_card__petname{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.pet_card__petowner{
+    margin: 0;
+    font-weight: 300;
+}
+
+.pet_card__description{
+    margin: 1.5rem 0;
+}
+
+.pet_card__date{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pet_card__date > *{
+    margin: 0 .5rem;
+}
+
+.error_message{
+    padding: 1rem;
+    width: 100%;
+    background-color: rgb(255, 60, 60);
+    color: white;
+    text-align: center;
 }
