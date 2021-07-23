@@ -35,8 +35,10 @@ function App() {
           <Grid direction="row" margin="4" gap="3">
             <Form addAppointment={addAppointment} appointments={appointments}/>
             <Grid direction="column" gap="2">
-              {
-                appointments.map(pet => (
+              { 
+              appointments.length === 0 
+              ? <h2 className='form_title'>¡Agrega una cita!</h2>
+              : appointments.map(pet => (
                   <PetCard petInfo={pet} key={pet.id} deleteAppointment={deleteAppointment} />
                 ))
               }

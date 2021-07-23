@@ -114,3 +114,16 @@ button:active{
     color: white;
     text-align: center;
 }
+
+@media (max-width: 800px){
+    .container{
+        margin: 0 2rem;
+    }
+    .container > .grid{
+        flex-direction: column !important;
+    }
+
+    .grid > .grid {
+        width: 100%;
+    }
+}
